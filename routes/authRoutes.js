@@ -18,6 +18,6 @@ const loginSchema = Joi.object({
 })
 
 router.post('/register', validator.body(registerSchema), controllers.postRegister);
-router.post('/login', validator.body(loginSchema), controllers.postRegister);
+router.post('/login', validator.body(loginSchema), controllers.postLogin);
 
 module.exports = router;

@@ -19,7 +19,7 @@ app.use('/api/auth', authRoutes);
 
 const server = http.createServer(app);
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI, {dbName: 'discord-clone'})
 .then(() => {
   server.listen(PORT, () => {
     console.log(`🚀 Server up and running port: ${PORT}`); 
